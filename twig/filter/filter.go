@@ -387,8 +387,7 @@ func filterNL2BR(ctx stick.Context, val stick.Value, args ...stick.Value) stick.
 }
 
 func filterNumberFormat(ctx stick.Context, val stick.Value, args ...stick.Value) stick.Value {
-	// TODO: Implement Me
-	return val
+	return strings.Trim(fmt.Sprintf("%20." + fmt.Sprintf("%v", args[0]) + "f", val), " ")
 }
 
 func filterRaw(ctx stick.Context, val stick.Value, args ...stick.Value) stick.Value {
